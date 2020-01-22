@@ -45,15 +45,15 @@ class _Homepage extends State<Homepage> {
           stream: audioC.outPlayer,
           builder: (context, AsyncSnapshot<AudioPlayerObj> snapshot){
             return _tap([
-              Text("aksdop"),
-        // Text(snapshot.data.musicaAtual),
+             
+        Text(snapshot.data.musicaAtual),
         
         _slider(),
         Row(mainAxisAlignment: 
         MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Text("00:00"),
-          // Text(snapshot.data.duration.inMinutes.toString()+ ":" + (snapshot.data.duration.inSeconds - (snapshot.data.duration.inMinutes * 60 )).toString()),
+          Text(snapshot.data.duration.inMinutes.toString()+ ":" + (snapshot.data.duration.inSeconds - (snapshot.data.duration.inMinutes * 60 )).toString()),
         ],),Text("Tempo da"),
         _retornarTempoMusica(),
         _acoes(snapshot.data),

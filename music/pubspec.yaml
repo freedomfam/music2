@@ -26,7 +26,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   rxdart: 0.21.0
   bloc_pattern: 2.1.0
-  camera: any
+  camera: 0.5.7+1
   image_picker: any
   audioplayers: ^0.13.2
 

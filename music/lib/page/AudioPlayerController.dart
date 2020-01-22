@@ -34,7 +34,7 @@ class AudioPlayerController extends BlocBase{
       inPlayer.add(audioObj);
     });
 
-    audioObj.musicaAtual = "มะล่องก่องแก่ง - มอส จารุภัทร Feat.แฮปปี้ ปริญญา Cover (original พจน์ สายอินดี้).mp3";
+    audioObj.musicaAtual = "มะล่องก่องแก่ง.mp3";
     inPlayer.add(audioObj);
   }
 
