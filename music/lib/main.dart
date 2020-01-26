@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:music/page/home.dart';
+import 'package:music/AudioPlayer/home.dart';
+import 'package:music/supplements/hero.dart';
+import 'package:music/supplements/splash.dart';
+
+import 'mainpage/intro.dart';
+import 'mainpage/login.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue, 
       ),
       home: Homepage(),
     );
