@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:music/AudioPlayer/home.dart';
 import 'package:music/mainpage/intro.dart';
 
-import 'hero.dart';
+
 
 
 class Splash extends StatefulWidget {

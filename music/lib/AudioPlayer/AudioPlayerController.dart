@@ -39,7 +39,6 @@ class AudioPlayerController extends BlocBase{
 
 
     });
-
     audioObjeto.musicaAtual = "a.mp3";
     inDuration.add(audioObjeto);
   }
@@ -90,6 +89,8 @@ class AudioPlayerController extends BlocBase{
   @override
   void dispose() {
   }
+
+  void seek(Duration newDuration) {}
 
 }
 

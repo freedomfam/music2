@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:music/AudioPlayer/home.dart';
-import 'package:music/supplements/hero.dart';
+
 import 'package:music/supplements/splash.dart';
 
+import 'mainpage/Textlogin.dart';
 import 'mainpage/intro.dart';
 import 'mainpage/login.dart';
+import 'mainpage/singer.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue, 
       ),
-      home: Homepage(),
+      home: Splash(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:music/supplements/photohero.dart';
+
 import 'AudioPlayer.dart';
 import 'AudioPlayerController.dart';
 import 'package:flutter/widgets.dart';
@@ -41,7 +41,6 @@ class _Homepage extends State<Homepage> with TickerProviderStateMixin {
           ),
           body: Column(children: <Widget>[
             Container(
-
             ),
             localAsset()
           ],)
@@ -94,7 +93,7 @@ class _Homepage extends State<Homepage> with TickerProviderStateMixin {
         ),
         Divider(),
         listaMusica("a.mp3"),
-        listaMusica("a2.mp3"),
+        listaMusica("a4.mp3"),
         
         Divider(),
       ],
@@ -156,17 +155,49 @@ class _Homepage extends State<Homepage> with TickerProviderStateMixin {
     );
   }
 
+  // Widget slider(AudioPlayerObjeto objto){
+  //   return Slider(
+  //     activeColor: Colors.blue,
+  //     value: objto.position.inSeconds.toDouble() ,
+  //     min: 0.0,
+  //     max: objto.duration.inSeconds.toDouble(),
+      
+  //     onChanged: (newVal){
+  //       audioController.tempoMusica(newVal);
+  //       print(objto.position.inSeconds.toDouble());
+
+
+  //     },
+  //   );
+  // }
+
   Widget slider(AudioPlayerObjeto objeto) {
     return Slider(
-        activeColor: Colors.amber,
-        onChanged: (newValue) {
-            print(newValue);
-           audioController.tempoMusica(newValue);
-            print(objeto.position.inSeconds.toDouble());
-        },
+        activeColor: Colors.blue,
         value: objeto.position.inSeconds.toDouble(),
-        min: 0.0,
-        max: objeto.duration.inSeconds.toDouble());
+         min: 0.0,
+        max: objeto.duration.inSeconds.toDouble(),
+        onChanged: (double value,) { 
+         audioController.tempoMusica(value);
+           print(value);
+          setState(() {
+            seekToSecond(value.toInt());
+            value = value;
+          });
+           });
+       
+        // value: objeto.position.inSeconds.toDouble(),
+        // min: 0.0,
+        // max: objeto.duration.inSeconds.toDouble()
+       
+        // );
+        
+        
+  }
+  void seekToSecond(int second){
+    Duration newDuration = Duration(seconds: second);
+
+    audioController.seek(newDuration);
   }
 
 }
