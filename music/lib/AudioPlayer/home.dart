@@ -77,7 +77,7 @@ class _Homepage extends State<Homepage> with TickerProviderStateMixin {
                   children: <Widget>[
                     Text(_retornarTempoMusica(snapshot.data.position,),style: TextStyle(color: Colors.white  ),),
                     Text(snapshot.data.duration.inMinutes.toString() + ":" + (snapshot.data.duration.inSeconds - (snapshot.data.duration.inMinutes * 60)).toString(),style: TextStyle(color: Colors.white),),              ],
-                ),
+                  ),
                 Text(_retornarTempoMusica(snapshot.data.position), style: TextStyle(fontSize: _tela * 0.05,color: Colors.white),),
                 Divider(),
                 acoes(snapshot.data),
@@ -155,50 +155,50 @@ class _Homepage extends State<Homepage> with TickerProviderStateMixin {
     );
   }
 
-  // Widget slider(AudioPlayerObjeto objto){
-  //   return Slider(
-  //     activeColor: Colors.blue,
-  //     value: objto.position.inSeconds.toDouble() ,
-  //     min: 0.0,
-  //     max: objto.duration.inSeconds.toDouble(),
-      
-  //     onChanged: (newVal){
-  //       audioController.tempoMusica(newVal);
-  //       print(objto.position.inSeconds.toDouble());
-
-
-  //     },
-  //   );
-  // }
-
-  Widget slider(AudioPlayerObjeto objeto) {
+  Widget slider(AudioPlayerObjeto objto){
     return Slider(
-        activeColor: Colors.blue,
-        value: objeto.position.inSeconds.toDouble(),
-         min: 0.0,
-        max: objeto.duration.inSeconds.toDouble(),
-        onChanged: (double value,) { 
-         audioController.tempoMusica(value);
-           print(value);
-          setState(() {
-            seekToSecond(value.toInt());
-            value = value;
-          });
-           });
-       
-        // value: objeto.position.inSeconds.toDouble(),
-        // min: 0.0,
-        // max: objeto.duration.inSeconds.toDouble()
-       
-        // );
-        
-        
-  }
-  void seekToSecond(int second){
-    Duration newDuration = Duration(seconds: second);
+      activeColor: Colors.blue,
+      value: objto.position.inSeconds.toDouble() ,
+      min: 0.0,
+      max: objto.duration.inSeconds.toDouble(),
+      
+      onChanged: (newVal){
+        audioController.tempoMusica(newVal);
+        print(objto.position.inSeconds.toDouble());
 
-    audioController.seek(newDuration);
+
+      },
+    );
   }
+
+  // Widget slider(AudioPlayerObjeto objeto) {
+  //   return Slider(
+  //       activeColor: Colors.blue,
+  //       value: objeto.position.inSeconds.toDouble(),
+  //       min: 0.0,
+  //       max: objeto.duration.inSeconds.toDouble(),
+  //       onChanged: (double value,) { 
+  //        audioController.tempoMusica(value);
+  //          print(value);
+  //         setState(() {
+  //           seekToSecond(value.toInt());
+  //           value = value;
+  //         });
+  //          });
+       
+  //       // value: objeto.position.inSeconds.toDouble(),
+  //       // min: 0.0,
+  //       // max: objeto.duration.inSeconds.toDouble()
+       
+  //       // );
+        
+        
+  // }
+  // void seekToSecond(int second){
+  //   Duration newDuration = Duration(seconds: second);
+
+  //   audioController.seek(newDuration);
+  // }
 
 }
 

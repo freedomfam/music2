@@ -55,12 +55,7 @@ class AudioPlayerController extends BlocBase{
     inDuration.add(audioObjeto);
 
   }
-  botaoSkipBack(){
-    audioObjeto.advancedPlayer.stop();
-    audioObjeto.advancedPlayer.play(audioController.audioObjeto.musicaAtual);
-    inDuration.add(audioObjeto);
 
-  }
 
   trocarMusica(String musica){
     audioObjeto.musicaAtual = musica;
