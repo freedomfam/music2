@@ -15,7 +15,7 @@ class _SplashState extends State<Splash> {
     void initState(){
       super.initState();
       Future.delayed(Duration(
-        seconds: 5
+        seconds: 3
       ),() {
         Navigator.push(context, MaterialPageRoute(
           builder: (context) => Intro()));
@@ -27,15 +27,12 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Image.asset("assets/img/music2.jpg",
+        child: Image.asset("assets/img/as.png",
         fit: BoxFit.fill
         ),
       ),
-      
       );
-      
 
-    
   }
 
 }

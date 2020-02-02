@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music/AudioPlayer/home.dart';
 
 class Singerlist extends StatefulWidget {
 
@@ -30,7 +31,9 @@ class _SingerlistState extends State<Singerlist> {
             title: Text('แว่นใหญ่',style: TextStyle(fontSize: 20),),
             trailing: Icon(Icons.keyboard_arrow_right,),
             onTap: () {
-              
+               Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage()
+                  )
+                  );
             },
           ),
            ),
