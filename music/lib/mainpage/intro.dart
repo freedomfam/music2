@@ -3,7 +3,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:music/AudioPlayer/home.dart';
 import 'package:music/mainpage/Textlogin.dart';
 
-import 'login.dart';
+
 
 class Intro extends StatelessWidget{
   @override
